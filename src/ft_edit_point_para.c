@@ -6,7 +6,7 @@
 /*   By: rlucas-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 14:19:31 by rlucas-d          #+#    #+#             */
-/*   Updated: 2018/12/20 15:46:39 by rlucas-d         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:23:30 by rlucas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 void		set_point_para(t_coord *current, t_param *param)
 {
 	int i;
-	int ec_x;
+//	int ec_x;
 
 	i = -1;
 	while (++i < param->map->size)
@@ -45,7 +45,7 @@ void		ft_rotate_para(t_param *param)
 {
 	t_line		*begin_lst;
 	int			i;
-	int			tmp_x;
+//	int			tmp_x;
 
 	begin_lst = param->map;
 	while (param->map)
@@ -65,7 +65,7 @@ void		ft_rotate_para(t_param *param)
 	param->map = begin_lst;
 }
 
-void		calcul_point_para(t_param *param, float *zoom)
+void		calcul_point_para(t_param *param/*, float *zoom*/)
 {
 	t_coord		current;
 	t_line		*begin_lst;

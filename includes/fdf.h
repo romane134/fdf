@@ -6,7 +6,7 @@
 /*   By: rlucas-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 14:44:48 by rlucas-d          #+#    #+#             */
-/*   Updated: 2018/12/20 16:07:12 by rlucas-d         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:19:59 by rlucas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,7 +168,7 @@ void				ft_draw_square(t_coord point, int size, int color,
 */
 void				init_point(t_coord *point);
 void				set_point(t_coord *current, t_param *param);
-void				calcul_point(t_param *param, float *zoom);
+void				calcul_point(t_param *param/*, float *zoom*/);
 void				ft_rotate(t_param *param);
 void				calcul_zoom(t_param *param, int lst_size);
 
@@ -176,7 +176,7 @@ void				calcul_zoom(t_param *param, int lst_size);
 ** ft_edit_point_para.c
 */
 void				set_point_para(t_coord *current, t_param *param);
-void				calcul_point_para(t_param *param, float *zoom);
+void				calcul_point_para(t_param *param/*, float *zoom*/);
 void				ft_rotate_para(t_param *param);
 
 /*
@@ -185,14 +185,13 @@ void				ft_rotate_para(t_param *param);
 void				make_change(t_all *all);
 int					ft_bigger(int val1, int val2);
 int					deal_key(int key, void *param);
-int					release_btn(int button, int x, int y, void *param);
+int					release_btn(int button/*, int x, int y*/, void *param);
 
 /*
 ** ft_mlx_mouse.c
 */
 int					deal_mouse(int button, int x, int y, void *param);
 int					deal_mouse2(int x, int y, void *param);
-void				deal_mouse3(int x, int y, t_all *fdf, void *param);
 
 /*
 ** ft_read_fdf.c
@@ -235,7 +234,7 @@ void				init_var_draw(t_var_draw *var, t_coord point1,
 /*
 ** draw_2.c
 */
-void				img_put_pixel(int *img, t_coord point, int size, int color);
+void				img_put_pixel(int *img, t_coord point/*, int size*/, int color);
 void				draw_sqrt(t_all all);
 void				print_bit(int color);
 

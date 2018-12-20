@@ -6,13 +6,13 @@
 /*   By: rlucas-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 13:14:27 by rlucas-d          #+#    #+#             */
-/*   Updated: 2018/12/20 15:39:37 by rlucas-d         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:23:02 by rlucas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-void		deal_mouse3(int x, int y, t_all *fdf, void *param)
+static	void	deal_mouse3(int x, int y, t_all *fdf/*, void *param*/)
 {
 	x -= 70;
 	y -= W_SIZEY - (300 + 70);
@@ -41,7 +41,7 @@ int			deal_mouse2(int x, int y, void *param)
 		}
 		else if (x >= 70 && x < 370 && y >= W_SIZEY - (300 + 70) &&
 				y < W_SIZEY - (300 + 70) + 300)
-			deal_mouse3(x, y, fdf, param);
+			deal_mouse3(x, y, fdf/*, param*/);
 		make_change((t_all*)param);
 	}
 	return (0);

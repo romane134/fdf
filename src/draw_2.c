@@ -6,7 +6,7 @@
 /*   By: rlucas-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 11:41:28 by rlucas-d          #+#    #+#             */
-/*   Updated: 2018/12/20 14:30:03 by rlucas-d         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:22:07 by rlucas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void			print_bits(int color)
 	}
 }
 
-void			img_put_pixel(int *img, t_coord point, int size, int color)
+void			img_put_pixel(int *img, t_coord point/*, int size*/, int color)
 {
 	if (point.y > 100 && point.y < W_SIZEY &&
 			point.x >= 0 && point.x < W_SIZEX)

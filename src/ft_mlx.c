@@ -6,7 +6,7 @@
 /*   By: rlucas-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 12:43:17 by rlucas-d          #+#    #+#             */
-/*   Updated: 2018/12/20 15:44:30 by rlucas-d         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:19:10 by rlucas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 void			make_change(t_all *all)
 {
 	if (all->projection == 0)
-		calcul_point(&all->tt, &all->tt.zoom);
+		calcul_point(&all->tt/*, &all->tt.zoom*/);
 	else
-		calcul_point_para(&all->tt, &all->tt.zoom);
+		calcul_point_para(&all->tt/*, &all->tt.zoom*/);
 	mlx_destroy_image(all->wdw.mlx_ptr, all->image.img);
 	all->image.img = mlx_new_image(all->wdw.mlx_ptr, W_SIZEX, W_SIZEY - 100);
 	all->image.data = (int *)mlx_get_data_addr(all->image.img, &all->image.bpp,
@@ -64,7 +64,7 @@ int				deal_key(int key, void *param)
 	return (0);
 }
 
-int				release_btn(int button, int x, int y, void *param)
+int				release_btn(int button/*, int x, int y,*/, void *param)
 {
 	if (button == 1)
 	{

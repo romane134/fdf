@@ -6,7 +6,7 @@
 /*   By: rhunders <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 18:42:06 by rhunders          #+#    #+#             */
-/*   Updated: 2018/12/20 16:11:54 by rlucas-d         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:25:43 by rlucas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static void	draw_line_3(t_coord *point, t_all all, t_var_draw var, int size_l)
 			color = delta_color(nb, point[0], point[1]);
 		else if (color != (int)point[0].color)
 			color = point[0].color;
-		img_put_pixel(all.image.data, point[0], all.image.size, color);
+		img_put_pixel(all.image.data, point[0],/* all.image.size,*/ color);
 	}
 }
 
@@ -92,7 +92,7 @@ static void	draw_line_2(t_coord *point, t_all all, t_var_draw var, int size_l)
 			color = delta_color(nb, point[0], point[1]);
 		else if (color != (int)point[0].color)
 			color = point[0].color;
-		img_put_pixel(all.image.data, point[0], all.image.size, color);
+		img_put_pixel(all.image.data, point[0],/* all.image.size,*/ color);
 	}
 }
 

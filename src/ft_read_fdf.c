@@ -6,7 +6,7 @@
 /*   By: rhunders <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 23:07:37 by rhunders          #+#    #+#             */
-/*   Updated: 2018/12/20 15:50:54 by rlucas-d         ###   ########.fr       */
+/*   Updated: 2018/12/20 16:37:16 by rlucas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int			ft_read_fdf(int fd, t_param *param)
 {
 	char	*line;
-	char	**tab;
+//	char	**tab;
 
 	if (get_next_line(fd, &line) > 0)
 	{
@@ -96,6 +96,6 @@ t_param		init_map(t_window window, int fd)
 		param.ecart /= 2;
 	else
 		param.ecart = 1;
-	calcul_point(&param, &param.zoom);
+	calcul_point(&param/*, &param.zoom*/);
 	return (param);
 }
